@@ -7,14 +7,15 @@ import java.util.TreeSet;
  *
  * @author Max Katrenko
  */
+
 public class Autopark {
-    private TreeSet<Car> myParking = new TreeSet<Car>();
+    private TreeSet<Car> myAutopark = new TreeSet<Car>();
 
     public void addToMyParking(Car car) {
-        myParking.add(car);
+        myAutopark.add(car);
     }
 
-    public TreeSet<Car> getMyParking() {
-        return myParking;
+    public TreeSet<Car> getMyAutopark() {
+        return myAutopark;
     }
 }

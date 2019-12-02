@@ -67,7 +67,7 @@ public class Controller {
         autopark.addToMyParking(PEUGEOT);
         autopark.addToMyParking(INFINITI);
 
-        view.printMyParking(autopark.getMyParking());
+        view.printMyParking(autopark.getMyAutopark());
         view.printPriceOfAllCars(Cars.priceOfAllCars());
     }
 }
