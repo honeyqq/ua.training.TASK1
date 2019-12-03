@@ -1,24 +1,47 @@
 package model.entities;
 
-public class Car extends Vehicle implements Comparable<Car> {
+public abstract class Car implements Drivable{
+    private String name;
+    private double fuelCapacity;
+    private double secondToHundreds;
+    private int price;
 
     public Car(String name, double fuelCapacity, double secondToHundreds, int price) {
-        super(name, fuelCapacity, secondToHundreds, price);
+        this.name = name;
+        this.fuelCapacity = fuelCapacity;
+        this.secondToHundreds = secondToHundreds;
+        this.price = price;
     }
 
-    @Override
-    public String toString() {
-        return "Name=" + getName() + ", Fuel capacity=" + getFuelCapacity() +
-                ", Seconds to hundreds=" + getSecondToHundreds() + ", Price=" + getPrice() + "\n";
+    public String getName() {
+        return name;
     }
 
-    @Override
-    public int compareTo(Car c) {
-        if (c.getFuelCapacity() > this.getFuelCapacity()) {
-            return -1;
-        } else if (c.getFuelCapacity() < this.getFuelCapacity()) {
-            return 1;
-        }
-        return 0;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getFuelCapacity() {
+        return fuelCapacity;
+    }
+
+    public void setFuelCapacity(double fuelCapacity) {
+        this.fuelCapacity = fuelCapacity;
+    }
+
+    public double getSecondToHundreds() {
+        return secondToHundreds;
+    }
+
+    public void setSecondToHundreds(double secondToHundreds) {
+        this.secondToHundreds = secondToHundreds;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }

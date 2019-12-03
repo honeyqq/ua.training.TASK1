@@ -32,4 +32,9 @@ public class View {
     public void printPriceOfAllCars(int priceOfAllCars) {
         System.out.println("Autopark costs: " + priceOfAllCars + " dollars");
     }
+
+    public void printFlexibleString(String message) {
+        printMessage(bundle.getString(message));
+    }
+
 }
