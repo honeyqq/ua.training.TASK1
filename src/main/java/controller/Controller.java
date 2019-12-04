@@ -71,7 +71,6 @@ public class Controller {
 
         view.printMyParking(autopark.getAutopark());
         view.printPriceOfAllCars(autopark.sumOfAllAutoPark());
-        view.printMessage(autopark.searchByDiapasonOfSpeed(300,400));
-
+        view.printMessage(autopark.searchByDiapasonOfSpeed(100,200));
     }
 }
