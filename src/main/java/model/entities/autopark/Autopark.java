@@ -3,7 +3,7 @@ package model.entities.autopark;
 import model.entities.Car;
 import model.entities.Drivable;
 
-import java.util.Iterator;
+import java.util.ArrayList;
 import java.util.TreeSet;
 
 public class Autopark {
@@ -13,7 +13,7 @@ public class Autopark {
         autoPark.add(drivable);
     }
 
-    public TreeSet<Drivable> showAutopark() {
+    public TreeSet<Drivable> getAutopark() {
         return autoPark;
     }
 
@@ -24,5 +24,16 @@ public class Autopark {
             a += car.getPrice();
         }
         return a;
+    }
+
+    public ArrayList<String> searchByDiapasonOfSpeed(int minDiapason, int maxDiapason) {
+        ArrayList<String> listOfCars = new ArrayList<>();
+        for (Drivable drivable : getAutopark()){
+            Car car = (Car) drivable;
+            if ((car.getMaxSpeed() <= maxDiapason) && (car.getMaxSpeed() >= minDiapason)){
+                listOfCars.add(car.getName());
+            }
+        }
+        return listOfCars;
     }
 }

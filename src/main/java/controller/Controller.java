@@ -24,8 +24,6 @@ public class Controller {
 
     public void execute() {
 
-        View view = new View();
-
         BmwFactory bmwX6 = new BmwFactory(BMW.BMW_X6.getName(), BMW.BMW_X6.getFuelConsumption(),
                 BMW.BMW_X6.getMaxSpeed(), BMW.BMW_X6.getPrice());
 
@@ -71,7 +69,9 @@ public class Controller {
         autopark.addToAutopark(porscheCayenee);
         autopark.addToAutopark(porschePanamera);
 
-        view.printMyParking(autopark.showAutopark());
+        view.printMyParking(autopark.getAutopark());
         view.printPriceOfAllCars(autopark.sumOfAllAutoPark());
+        view.printMessage(autopark.searchByDiapasonOfSpeed(300,400));
+
     }
 }

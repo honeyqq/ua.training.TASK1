@@ -2,6 +2,7 @@ package view;
 
 import model.entities.Drivable;
 
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.TreeSet;
@@ -37,4 +38,7 @@ public class View {
         printMessage(bundle.getString(message));
     }
 
+    public void printMessage(ArrayList<String> searchByDiapasonOfSpeed) {
+        System.out.println(searchByDiapasonOfSpeed);
+    }
 }
