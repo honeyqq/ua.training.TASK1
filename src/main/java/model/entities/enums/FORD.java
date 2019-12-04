@@ -1,15 +1,16 @@
 package model.entities.enums;
 
-public enum BMW {
-    BMW_X6 ("BMW X6",9.7,304,78300),
-    BMW_X7 ("BMW X7",10.6,209,92500);
+
+public enum FORD {
+    FORD_MUSTANG ("FORD MUSTANG",9.5,262,35095),
+    FORD_FOCUS ("FORD FOCUS",8.5,265,19000);
 
     private String name;
     private double fuelConsumption;
     private int maxSpeed;
     private int price;
 
-    private BMW(String name, double fuelConsumption, int maxSpeed,int price) {
+    private FORD(String name, double fuelConsumption, int maxSpeed, int price) {
         this.name = name;
         this.fuelConsumption = fuelConsumption;
         this.maxSpeed = maxSpeed;

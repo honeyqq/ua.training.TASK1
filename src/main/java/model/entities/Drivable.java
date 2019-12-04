@@ -1,5 +1,5 @@
 package model.entities;
 
-public interface Drivable {
+public interface Drivable extends Comparable<Car> {
     void drive();
 }

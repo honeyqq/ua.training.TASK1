@@ -3,12 +3,11 @@ package model.entities.factories;
 import model.entities.Car;
 import model.entities.Drivable;
 
-public class MercedesFactory extends Car implements Drivable {
+public class PorscheFactory extends Car implements Drivable {
 
-    public MercedesFactory(String name, double fuelConsumption, int maxSpeed, int price) {
+    public PorscheFactory(String name, double fuelConsumption, int maxSpeed, int price) {
         super(name, fuelConsumption, maxSpeed, price);
     }
-
 
     @Override
     public void drive() {

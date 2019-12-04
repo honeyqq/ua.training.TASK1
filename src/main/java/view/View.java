@@ -1,7 +1,8 @@
 package view;
 
-import model.entities.Car;
+import model.entities.Drivable;
 
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.TreeSet;
@@ -25,7 +26,7 @@ public class View {
         System.out.println(message);
     }
 
-    public void printMyParking(TreeSet<Car> myParking) {
+    public void printMyParking(TreeSet<Drivable> myParking) {
         System.out.println(myParking);
     }
 
