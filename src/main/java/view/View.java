@@ -38,4 +38,7 @@ public class View {
         printMessage(bundle.getString(message));
     }
 
+    public void printMessage(ArrayList<String> searchByDiapasonOfSpeed) {
+        System.out.println(searchByDiapasonOfSpeed);
+    }
 }
