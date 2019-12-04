@@ -7,6 +7,11 @@ package model;
  */
 
 public class Model {
+
+    public void sortByFuel(){
+
+    }
+
     public void searchByDiapasonOfSpeed() {
 
     }

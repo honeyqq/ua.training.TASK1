@@ -1,13 +1,14 @@
 package model.entities.factories;
 
 import model.entities.Car;
+import model.entities.Drivable;
 
-public class BmwFactory extends Car implements Comparable {
+public class BmwFactory extends Car implements Drivable {
 
-    public BmwFactory(String name, double fuelCapacity, double secondToHundreds, int price) {
-        super(name, fuelCapacity, secondToHundreds, price);
+    public BmwFactory(String name, double fuelConsumption, int maxSpeed, int price) {
+        super(name, fuelConsumption, maxSpeed, price);
+
     }
-
 
     @Override
     public void drive() {
@@ -15,7 +16,18 @@ public class BmwFactory extends Car implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(Car car) {
+        if (car.getFuelConsumption() > this.getFuelConsumption()) {
+            return 1;
+        } else if (car.getFuelConsumption() < this.getFuelConsumption()) {
+            return -1;
+        }
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return getName() + ", fuelConsumption= " + getFuelConsumption() + ", maxSpeed=" + getMaxSpeed() +
+                ", price=" + getPrice() + " dollars" + "\n";
     }
 }
