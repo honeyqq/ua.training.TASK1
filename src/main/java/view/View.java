@@ -2,7 +2,6 @@ package view;
 
 import model.entities.Drivable;
 
-import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.TreeSet;
