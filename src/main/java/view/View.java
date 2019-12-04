@@ -15,15 +15,14 @@ import java.util.TreeSet;
 
 public class View {
 
-    static String MESSAGES_BUNDLE_NAME = "messages";
+    static String BUNDLE_NAME = "messages";
     public static final ResourceBundle bundle =
-            ResourceBundle.getBundle(
-                    MESSAGES_BUNDLE_NAME,
-                    //new Locale("ua");
+            ResourceBundle.getBundle(BUNDLE_NAME,
                     new Locale("en"));
+                    //new Locale("ua"));
 
     public void printMessage(String message) {
-        System.out.println(message);
+        bundle.getString(message);
     }
 
     public void printMyParking(TreeSet<Drivable> myParking) {
@@ -31,11 +30,8 @@ public class View {
     }
 
     public void printPriceOfAllCars(int priceOfAllCars) {
-        System.out.println("Autopark costs: " + priceOfAllCars + " dollars");
-    }
-
-    public void printFlexibleString(String message) {
-        printMessage(bundle.getString(message));
+        System.out.println(bundle.getString(TextConstants.AUTOPARK_COSTS) + priceOfAllCars + " " +
+                bundle.getString(TextConstants.DOLLARS));
     }
 
     public void printMessage(ArrayList<String> searchByDiapasonOfSpeed) {

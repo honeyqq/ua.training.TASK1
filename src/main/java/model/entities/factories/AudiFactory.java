@@ -3,6 +3,7 @@ package model.entities.factories;
 import model.entities.Car;
 import model.entities.Drivable;
 
+
 public class AudiFactory extends Car implements Drivable {
 
     public AudiFactory(String name, double fuelConsumption, int maxSpeed, int price) {
