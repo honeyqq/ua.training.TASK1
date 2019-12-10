@@ -1,16 +1,13 @@
-package model.entities.enums;
+package model.entities.cars;
 
-public enum AUDI {
 
-    AUDI_S6 ("AUDI S6",7.6,235,73900),
-    AUDI_A3 ("AUDI A3",6.5,250,32500);
-
+public abstract class Car implements Comparable<Car> {
     private String name;
     private double fuelConsumption;
     private int maxSpeed;
     private int price;
 
-    private AUDI(String name, double fuelConsumption, int maxSpeed, int price) {
+    public Car(String name, double fuelConsumption, int maxSpeed, int price) {
         this.name = name;
         this.fuelConsumption = fuelConsumption;
         this.maxSpeed = maxSpeed;
@@ -21,16 +18,12 @@ public enum AUDI {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getPrice() {
+        return price;
     }
 
     public double getFuelConsumption() {
         return fuelConsumption;
-    }
-
-    public void setFuelConsumption(double fuelConsumption) {
-        this.fuelConsumption = fuelConsumption;
     }
 
     public int getMaxSpeed() {
@@ -41,11 +34,4 @@ public enum AUDI {
         this.maxSpeed = maxSpeed;
     }
 
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
 }

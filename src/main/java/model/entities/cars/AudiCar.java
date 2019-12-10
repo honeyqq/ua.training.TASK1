@@ -1,18 +1,10 @@
-package model.entities.factories;
-
-import model.entities.Car;
-import model.entities.Drivable;
+package model.entities.cars;
 
 
-public class AudiFactory extends Car implements Drivable {
+public class AudiCar extends Car {
 
-    public AudiFactory(String name, double fuelConsumption, int maxSpeed, int price) {
+    public AudiCar(String name, double fuelConsumption, int maxSpeed, int price) {
         super(name, fuelConsumption, maxSpeed, price);
-    }
-
-    @Override
-    public void drive() {
-        System.out.println(getName() + " is driving");
     }
 
     @Override

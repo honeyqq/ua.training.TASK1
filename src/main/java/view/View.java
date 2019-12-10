@@ -1,6 +1,6 @@
 package view;
 
-import model.entities.Drivable;
+import model.entities.cars.Car;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -10,7 +10,7 @@ import java.util.TreeSet;
 /**
  * Created 30.11.2019
  *
- * @author Max Katrenko
+ * @author Max
  */
 
 public class View {
@@ -19,13 +19,13 @@ public class View {
     public static final ResourceBundle bundle =
             ResourceBundle.getBundle(BUNDLE_NAME,
                     new Locale("en"));
-                    //new Locale("ua"));
+    //new Locale("ua"));
 
-    public void printMessage(String message) {
-        bundle.getString(message);
+    public void printCarsFromDiapason(String message) {
+        System.out.println(bundle.getString(message));
     }
 
-    public void printMyParking(TreeSet<Drivable> myParking) {
+    public void printMyParking(TreeSet<Car> myParking) {
         System.out.println(myParking);
     }
 
@@ -34,7 +34,7 @@ public class View {
                 bundle.getString(TextConstants.DOLLARS));
     }
 
-    public void printMessage(ArrayList<String> searchByDiapasonOfSpeed) {
-        System.out.println(searchByDiapasonOfSpeed);
+    public void printCarsFromDiapason(ArrayList<String> diapasonOfSpeed) {
+        System.out.println(diapasonOfSpeed);
     }
 }

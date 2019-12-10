@@ -1,8 +1,7 @@
-import model.entities.autopark.Autopark;
-import model.entities.enums.BMW;
-import model.entities.enums.PORSCHE;
-import model.entities.factories.BmwFactory;
-import model.entities.factories.PorscheFactory;
+import model.Autopark;
+import model.entities.cars.BmwCar;
+import model.entities.cars.PorscheCar;
+import model.entities.enums.CARS;
 import org.junit.*;
 
 import static org.junit.Assert.*;
@@ -13,20 +12,20 @@ public class Tests {
 
     @Before
     public void setUP() {
-        BmwFactory bmwX6 = new BmwFactory(BMW.BMW_X6.getName(), BMW.BMW_X6.getFuelConsumption(),
-                BMW.BMW_X6.getMaxSpeed(), BMW.BMW_X6.getPrice());
+        BmwCar bmwX6 = new BmwCar(CARS.BMW_X6.getName(), CARS.BMW_X6.getFuelConsumption(),
+                CARS.BMW_X6.getMaxSpeed(), CARS.BMW_X6.getPrice());
 
-        PorscheFactory porsche = new PorscheFactory(PORSCHE.PORSCHE_CAYENNE.getName(),
-                PORSCHE.PORSCHE_CAYENNE.getFuelConsumption(), PORSCHE.PORSCHE_CAYENNE.getMaxSpeed(),
-                PORSCHE.PORSCHE_CAYENNE.getPrice());
+        PorscheCar porsche = new PorscheCar(CARS.PORSCHE_CAYENNE.getName(),
+                CARS.PORSCHE_CAYENNE.getFuelConsumption(), CARS.PORSCHE_CAYENNE.getMaxSpeed(),
+                CARS.PORSCHE_CAYENNE.getPrice());
 
         autopark.addToAutopark(bmwX6);
         autopark.addToAutopark(porsche);
     }
 
     @Test
-    public void searchByDiapasonOfSpeed(){
-        int expected = PORSCHE.PORSCHE_CAYENNE.getPrice() + BMW.BMW_X6.getPrice();
+    public void testSumOfAllAutoPark(){
+        int expected = CARS.PORSCHE_CAYENNE.getPrice() + CARS.BMW_X6.getPrice();
         int actual = autopark.sumOfAllAutoPark();
         assertEquals(expected,actual);
     }
