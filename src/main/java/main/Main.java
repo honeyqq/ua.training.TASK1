@@ -1,18 +1,17 @@
 package main;
 
 import controller.Controller;
-import model.Model;
 import view.View;
 
 /**
  * Created 30.11.2019
  *
- * @author Max Katrenko
+ * @author Max
  */
 
 public class Main {
     public static void main(String[] args) {
-        Controller controller = new Controller(new Model(), new View());
+        Controller controller = new Controller(new View());
         controller.execute();
     }
 }

@@ -1,17 +1,10 @@
-package model.entities.factories;
+package model.entities.cars;
 
-import model.entities.Car;
-import model.entities.Drivable;
 
-public class PorscheFactory extends Car implements Drivable {
+public class PorscheCar extends Car {
 
-    public PorscheFactory(String name, double fuelConsumption, int maxSpeed, int price) {
+    public PorscheCar(String name, double fuelConsumption, int maxSpeed, int price) {
         super(name, fuelConsumption, maxSpeed, price);
-    }
-
-    @Override
-    public void drive() {
-        System.out.println(getName() + " is driving");
     }
 
     @Override
